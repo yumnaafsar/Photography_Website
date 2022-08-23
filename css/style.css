@@ -1,0 +1,181 @@
+/* CSS RESET */
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Navigation bar */
+
+#nav-bar{
+    display:flex;
+    flex-direction: row;
+    position: relative;
+    top: 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav-bar::before{
+    content: "";
+    display:flex;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#nav-bar ul{
+    display: flex;
+}
+
+#nav-bar li{
+    list-style: none;
+    padding: 15px;
+    margin: 11px;
+}
+#nav-bar a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px
+}
+
+#nav-bar a:hover{
+    color: black;
+    background-color: white;
+    border-radius: 12px;
+    text-decoration:underline;
+}
+
+/* Home */
+
+#home{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    height: 472px;
+    width: 100%;
+    
+}
+
+#home::before{
+    content: "";
+    display:flex;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 90%;
+    background: url('../img/bg.jpg') no-repeat center center/cover;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+#home p{
+    color: white;
+    font-size: 25px;
+}
+
+.h1-primary{
+    color: white;
+    font-size: 65px;
+    padding-top: 45px;
+}
+
+/* Albums */
+#albums{
+    /* background-color: rgb(110, 134, 185); */
+    height: 399px;
+    margin-top: 22px;
+}
+
+#albums::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 399px;
+    background: url('../img/bg1.jpg') no-repeat center center/cover;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+#albums h1{
+    font-size: 46px;
+    padding-top: 10px;
+}
+
+#photo{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content:center;
+    width: 100%;
+    height: 325px;
+}
+
+.box{
+    width: 356px;
+    height: 261px;
+    margin: 17px;
+    border: 3px solid black;
+    position: relative;
+    border-radius: 20px;
+}
+
+.box img{
+    width:356px ;
+    height: 261px;
+    display: block;
+    position: absolute;
+    border-radius: 20px;
+}
+.top{
+    animation-name: fade;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-direction: alternate;
+}
+
+@keyframes fade{
+    0% {
+        opacity: 1;
+      }
+      25% {
+        opacity: 1;
+      }
+      75% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+}
+
+/* Footer */
+footer{
+    color: white;
+    background-color: black;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+
+/* Utility classes */
+
+.center{
+    text-align: center;
+}
+
+.h2-secondary{
+    font-size: 1.8rem;
+    color: rgb(51, 29, 1);
+    padding-bottom: 5px;
+}
+
+/* ---------------------------------------------------- */
